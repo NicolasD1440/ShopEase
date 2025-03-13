@@ -1,31 +1,112 @@
-     body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .login-container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        input {
-            display: block;
-            width: 100%;
-            margin: 10px 0;
-            padding: 10px;
-        }
-        button {
-            background: blue;
-            color: white;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background: darkblue;
-        }
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #002853, #004aad);
+    margin: 0;
+}
+/* Aplicar la fuente en los botones y entradas */
+input, button, p {
+    font-family: 'Raleway', sans-serif;
+}
+
+.login-container {
+    display: flex;
+    width: 800px;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-section {
+    flex: 1;
+    background: url('background.jpg') no-repeat center/cover;
+}
+
+.form-section {
+    flex: 1;
+    background: white;
+    padding: 40px;
+    text-align: center;
+}
+
+h2 {
+    color: #0066ff;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 85%;
+    margin-left: auto; /* Mantiene el mismo alineado que los inputs */
+    margin-right: auto;
+}
+
+input {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.texto{
+    align-items: left;
+    text-align: left;
+    width: 85%;
+    margin-left: auto; /* Mantiene el mismo alineado que los inputs */
+    margin-right: auto;
+    color: #b3b3b3;
+}
+
+.remember-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    margin: 10px auto;
+    font-size: 14px;
+}
+
+.remember-container label {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaciado entre checkbox y texto */
+}
+
+.remember-container a {
+    text-decoration: none;
+    color: #0066ff;
+    font-weight: 600;
+}
+
+.remember-container a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background: #0066ff;
+    color: white;
+    padding: 10px;
+    width: 85%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #004aad;
+}
+
+.create-account {
+    margin-top: 15px;
+    font-size: 14px;
+    color: gray;
+    cursor: pointer;
+}
+
+.create-account:hover {
+    color: black;
+}
