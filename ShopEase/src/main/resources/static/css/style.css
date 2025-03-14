@@ -23,7 +23,7 @@ input, button, p {
 
 .image-section {
     flex: 1;
-    background: url('background.jpg') no-repeat center/cover;
+    background: url('/images/background.jpg') no-repeat center/cover;
 }
 
 .form-section {
