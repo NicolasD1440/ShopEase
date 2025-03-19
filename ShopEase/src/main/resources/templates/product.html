@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Producto</title>
+    <link rel="stylesheet" href="description.css">
+</head>
+<body>
+    <div class="product-container">
+        <div class="product-image">
+            <img id="product-image" src="" alt="Imagen del producto">
+        </div>
+        <div class="product-info">
+            <a href="home.html" class="back-link">← Volver al catálogo</a>
+            <h1 id="product-title"></h1>
+            <p class="price" id="product-price"></p>
+            <p><strong>En stock</strong></p>
+            <label for="quantity">Cantidad:</label>
+            <input type="number" id="quantity" value="1" min="1">
+            <button class="add-to-cart">Añadir al carrito</button>
+
+            <h2>Detalles del Producto</h2>
+            <p id="product-description"></p>
+
+            <div class="actions">
+                <button class="favorite">❤️ Favorito</button>
+                <div class="share">
+                    <p>Compartir:</p>
+                    <button>🔗</button>
+                    <button>🐦</button>
+                    <button>📌</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Obtener parámetros de la URL
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('product-image').src = params.get('image');
+        document.getElementById('product-title').innerText = params.get('title');
+        document.getElementById('product-price').innerText = "$" + params.get('price');
+        document.getElementById('product-description').innerText = params.get('description');
+    </script>
+</body>
+</html>
